@@ -13,7 +13,11 @@ public class Numbersmat {
       int myNegative = -199;
      /* System.out.print(Math.abs(myNegative)); /*abs te da el valor absoluto de una cantidad*/ 
      /* System.out.print(Math.pow(ageb , 2)); /*da la potencia*/
-      System.out.print(Math.sqrt(121));  /*da el cuadrado para obtener dicha potencia*/
+     /* System.out.print(Math.sqrt(121));  /*da el cuadrado para obtener dicha potencia*/
+      /*System.out.print(Math.min(myNegative, ageb)); /*te da la menor cifra*/
+      /*System.out.print(Math.max(currentyear, ageb)); /*te da el numero mayor cifra*/
+      System.out.print(Math.round(25.3));  /*numero redondeado*/
+      
 	}
 
 }

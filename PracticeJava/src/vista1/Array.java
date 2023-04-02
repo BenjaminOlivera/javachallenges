@@ -14,7 +14,7 @@ public class Array {
      friendsList[0] = "Benoni";
      friendsList[1] = "Mark";
      friendsList[2] = "Jhon";
-     System.out.println(friendList[]);
+    
      }
 
 }

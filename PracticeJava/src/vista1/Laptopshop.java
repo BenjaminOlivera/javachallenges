@@ -14,10 +14,18 @@ import javax.swing.JMenu;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JEditorPane;
 import javax.swing.JMenuItem;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Laptopshop extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField txtProcesador;
+	private JTextField txtRam;
+	private JTextField txtUnidad;
+	private JTextField txtTarjeta;
+	private JTextField txtPrecio;
 
 	/**
 	 * Launch the application.
@@ -49,31 +57,97 @@ public class Laptopshop extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblCategorias = new JLabel("Categorias");
-		lblCategorias.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblCategorias.setBounds(24, 36, 88, 21);
-		contentPane.add(lblCategorias);
+		JLabel lblModelo = new JLabel("Modelo");
+		lblModelo.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblModelo.setBounds(24, 36, 88, 21);
+		contentPane.add(lblModelo);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 436, 22);
 		contentPane.add(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Laptops");
+		JMenu mnNewMenu = new JMenu("Equipos");
 		menuBar.add(mnNewMenu);
 		
 		JMenu mnNewMenu_1 = new JMenu("Categoria");
 		mnNewMenu.add(mnNewMenu_1);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Desarrollo Web");
-		mnNewMenu_1.add(mntmNewMenuItem);
+		JMenuItem smnDesarrollo = new JMenuItem("Desarrollo Web");
+		mnNewMenu_1.add(smnDesarrollo);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Diseño");
-		mnNewMenu_1.add(mntmNewMenuItem_1);
+		JMenuItem smnDiseño = new JMenuItem("Diseño");
+		mnNewMenu_1.add(smnDiseño);
 		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Gamer");
-		mnNewMenu_1.add(mntmNewMenuItem_2);
+		JMenuItem smnGamer = new JMenuItem("Gamer");
+		mnNewMenu_1.add(smnGamer);
 		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Escolar");
-		mnNewMenu_1.add(mntmNewMenuItem_3);
+		JMenuItem smnEscolar = new JMenuItem("Escolar");
+		mnNewMenu_1.add(smnEscolar);
+		
+		JLabel lblProcesador = new JLabel("Procesador");
+		lblProcesador.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblProcesador.setBounds(24, 67, 88, 21);
+		contentPane.add(lblProcesador);
+		
+		JLabel lblRam = new JLabel("Ram");
+		lblRam.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblRam.setBounds(24, 98, 88, 21);
+		contentPane.add(lblRam);
+		
+		JLabel lblUnidad = new JLabel("Unidad A.");
+		lblUnidad.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUnidad.setBounds(24, 129, 88, 21);
+		contentPane.add(lblUnidad);
+		
+		JLabel lblTarjeta = new JLabel("Tarjeta");
+		lblTarjeta.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblTarjeta.setBounds(24, 163, 88, 21);
+		contentPane.add(lblTarjeta);
+		
+		JLabel lblPrecio = new JLabel("Precio");
+		lblPrecio.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblPrecio.setBounds(24, 200, 88, 21);
+		contentPane.add(lblPrecio);
+		
+		txtProcesador = new JTextField();
+		txtProcesador.setColumns(10);
+		txtProcesador.setBounds(122, 70, 190, 19);
+		contentPane.add(txtProcesador);
+		
+		txtRam = new JTextField();
+		txtRam.setColumns(10);
+		txtRam.setBounds(122, 101, 190, 19);
+		contentPane.add(txtRam);
+		
+		txtUnidad = new JTextField();
+		txtUnidad.setColumns(10);
+		txtUnidad.setBounds(122, 132, 190, 19);
+		contentPane.add(txtUnidad);
+		
+		txtTarjeta = new JTextField();
+		txtTarjeta.setColumns(10);
+		txtTarjeta.setBounds(122, 166, 190, 19);
+		contentPane.add(txtTarjeta);
+		
+		txtPrecio = new JTextField();
+		txtPrecio.setColumns(10);
+		txtPrecio.setBounds(122, 200, 190, 19);
+		contentPane.add(txtPrecio);
+		
+		JButton btnAgregar = new JButton("Agregar");
+		btnAgregar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnAgregar.setBounds(119, 232, 85, 21);
+		contentPane.add(btnAgregar);
+		
+		JButton btnLimpiar = new JButton("Limpiar");
+		btnLimpiar.setBounds(227, 232, 85, 21);
+		contentPane.add(btnLimpiar);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(122, 38, 190, 21);
+		contentPane.add(comboBox);
 	}
 }

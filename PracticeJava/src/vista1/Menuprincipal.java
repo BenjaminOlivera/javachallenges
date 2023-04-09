@@ -8,6 +8,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
 
 public class Menuprincipal extends JFrame {
 
@@ -43,6 +46,9 @@ public class Menuprincipal extends JFrame {
 		JMenu mnNewMenu = new JMenu("Archivo");
 		menuBar.add(mnNewMenu);
 		
+		JMenuItem mntmNewMenuItem_3 = new JMenuItem("cerrar");
+		mnNewMenu.add(mntmNewMenuItem_3);
+		
 		JMenu mnNewMenu_1 = new JMenu("Mantenimiento");
 		menuBar.add(mnNewMenu_1);
 		
@@ -54,11 +60,28 @@ public class Menuprincipal extends JFrame {
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Curso");
 		mnNewMenu_1.add(mntmNewMenuItem_2);
+		
+		JMenu mnNewMenu_2 = new JMenu("Cálculos");
+		menuBar.add(mnNewMenu_2);
+		
+		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Aritmético");
+		mnNewMenu_2.add(mntmNewMenuItem_4);
+		
+		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Geométrico");
+		mnNewMenu_2.add(mntmNewMenuItem_5);
+		
+		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Temperatura");
+		mnNewMenu_2.add(mntmNewMenuItem_6);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Bienvenido al sistema de mantenimiento");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel.setForeground(new Color(0, 128, 255));
+		lblNewLabel.setBounds(221, 143, 311, 24);
+		contentPane.add(lblNewLabel);
 	}
-
 }

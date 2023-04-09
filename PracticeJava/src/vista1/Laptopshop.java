@@ -17,6 +17,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class Laptopshop extends JFrame {
 
@@ -47,6 +48,7 @@ public class Laptopshop extends JFrame {
 	 * Create the frame.
 	 */
 	public Laptopshop() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\eclipse-workspace\\Iconos\\cynda.png"));
 		setTitle("Laptopshop");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

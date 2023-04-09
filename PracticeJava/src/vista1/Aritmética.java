@@ -16,7 +16,16 @@ public class Aritmética extends JPanel {
 	private int numero1;
 	private int numero2;
 	private int suma,resta,producto,division;
-
+	
+	
+   /* funcion que calcula la suma*/
+	public int sumaNum(int a, int b) {
+		int sumita = a+b;
+		return  sumita;
+	}
+	
+	
+	
 	/**
 	 * Create the panel.
 	 */

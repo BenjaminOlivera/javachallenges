@@ -43,7 +43,9 @@ public class Aritmética extends JPanel {
 		txtnum2.setColumns(10);
 		txtnum2.setBounds(160, 93, 125, 19);
 		add(txtnum2);
-		
+		JTextArea txtresultado = new JTextArea();
+		txtresultado.setBounds(105, 136, 180, 176);
+		add(txtresultado);
 		JButton btncalcular = new JButton("Calcular");
 		btncalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -53,14 +55,29 @@ public class Aritmética extends JPanel {
                //proceso
 				suma = numero1 + numero2 ;
 				resta = numero1 - numero2;
+				producto = numero1 * numero2;
+				division = numero1 / numero2;
+				//salida
+				txtresultado.setText("Resultado\n");
+				txtresultado.append("***********************\n");
+				txtresultado.append("Numero 1: " +numero1+"\n");
+				txtresultado.append("Numero 2: " +numero2+"\n");
+				txtresultado.append("----------------------\n");
+				txtresultado.append("SUMA \n");
+				txtresultado.append(String.valueOf(suma) +"\n");
+				txtresultado.append("RESTA \n");
+				txtresultado.append(String.valueOf(resta) +"\n");
+				txtresultado.append("PRODUCTO \n");
+				txtresultado.append(String.valueOf(producto) +"\n");
+				txtresultado.append("DIVISION \n");
+				txtresultado.append(String.valueOf(division) +"\n");
+
 			}
 		});
 		btncalcular.setBounds(329, 112, 85, 21);
 		add(btncalcular);
 		
-		JTextArea txtresultado = new JTextArea();
-		txtresultado.setBounds(95, 187, 231, 89);
-		add(txtresultado);
+		
 
 	}
 }

@@ -11,6 +11,10 @@ import javax.swing.JMenuItem;
 import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.CardLayout;
+import javax.swing.SwingConstants;
 
 public class Menuprincipal extends JFrame {
 
@@ -38,7 +42,7 @@ public class Menuprincipal extends JFrame {
 	public Menuprincipal() {
 		setTitle("Sistema de Mantenimiento");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 764, 388);
+		setBounds(100, 100, 485, 388);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -65,6 +69,12 @@ public class Menuprincipal extends JFrame {
 		menuBar.add(mnNewMenu_2);
 		
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Aritmético");
+		mntmNewMenuItem_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Aritmética a1 = new Aritmética();
+				nuevoPanel(a1);
+			}
+		});
 		mnNewMenu_2.add(mntmNewMenuItem_4);
 		
 		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Geométrico");
@@ -76,12 +86,20 @@ public class Menuprincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		contentPane.setLayout(new CardLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("Bienvenido al sistema de mantenimiento");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel.setForeground(new Color(0, 128, 255));
-		lblNewLabel.setBounds(221, 143, 311, 24);
-		contentPane.add(lblNewLabel);
+		contentPane.add(lblNewLabel, "name_34236389691999");
+	}
+	//metodo privado void --> no devuelve valor
+	private void nuevoPanel(JPanel panelActual) {
+		contentPane.removeAll();
+		contentPane.add(panelActual);
+		contentPane.repaint();
+		contentPane.revalidate();
+		
 	}
 }

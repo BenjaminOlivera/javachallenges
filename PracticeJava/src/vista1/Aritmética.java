@@ -18,7 +18,7 @@ public class Aritmética extends JPanel {
 	private int suma,resta,producto,division;
 	
 	
-   /* funcion que calcula la suma*/
+   /* metodo (funcion dentro de una clase) que calcula la suma*/
 	public int sumaNum(int a, int b) {
 		int sumita = a+b;
 		return  sumita;
@@ -62,10 +62,15 @@ public class Aritmética extends JPanel {
 				numero1= Integer.parseInt(txtnum1.getText());
 				numero2= Integer.parseInt(txtnum2.getText());
                //proceso
-				suma = numero1 + numero2 ;
+				//suma = numero1 + numero2 ;
 				resta = numero1 - numero2;
 				producto = numero1 * numero2;
 				division = numero1 / numero2;
+				//USAREMOS METODOS
+				 int resulSum = sumaNum(numero1,numero2);
+				
+				
+				
 				//salida
 				txtresultado.setText("Resultado\n");
 				txtresultado.append("***********************\n");
@@ -73,7 +78,7 @@ public class Aritmética extends JPanel {
 				txtresultado.append("Numero 2: " +numero2+"\n");
 				txtresultado.append("----------------------\n");
 				txtresultado.append("SUMA \n");
-				txtresultado.append(String.valueOf(suma) +"\n");
+				txtresultado.append(String.valueOf(resulSum) +"\n");
 				txtresultado.append("RESTA \n");
 				txtresultado.append(String.valueOf(resta) +"\n");
 				txtresultado.append("PRODUCTO \n");

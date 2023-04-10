@@ -48,7 +48,7 @@ public class Laptopshop extends JFrame {
 	 * Create the frame.
 	 */
 	public Laptopshop() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\eclipse-workspace\\Iconos\\cynda.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\eclipse-workspace\\Iconos\\piramide.png"));
 		setTitle("Laptopshop");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

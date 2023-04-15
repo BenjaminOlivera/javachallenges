@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+import javax.swing.DefaultComboBoxModel;
 
 public class Laptopshop extends JFrame {
 
@@ -48,10 +49,9 @@ public class Laptopshop extends JFrame {
 	 * Create the frame.
 	 */
 	public Laptopshop() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\eclipse-workspace\\Iconos\\piramide.png"));
 		setTitle("Laptopshop");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 386, 346);
 		contentPane = new JPanel();
 		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -137,10 +137,66 @@ public class Laptopshop extends JFrame {
 		contentPane.add(txtPrecio);
 		
 		JComboBox cmbmodelo = new JComboBox();
+		cmbmodelo.setModel(new DefaultComboBoxModel(new String[] {"GAMER ASUS TUF F15", "ASUS TUF GAMING A 15", "ASUS CI3 ", "ASUS X1502ZA-BQ704W 15.6", " LENOVO V14 INTEL", "HP 15-EF2501LA 15.6", "HP 14' HD 240G7 CELERON ", "ADVANCE PS7085,15.6' FHD", "HP 15.6' 15-DY5010LA ", "HP 15-DY2505LA 15.6", "HP 14-cf2513 ", "THINK PAD  P1 5ta Generacion 16"}));
 		cmbmodelo.setBounds(122, 38, 190, 21);
 		contentPane.add(cmbmodelo);
 		
 		JButton btnagregar = new JButton("Agregar");
+		btnagregar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String item;  //here
+				item = cmbmodelo.getSelectedItem().toString();
+				
+				String txtProcesador[] = {"Intel Core i7 ","Ryzen 7","Intel Core I5","Ryzen 5","CELERON N4020","Core I3","Core I9 seri H"};
+				String  txtRam[] = {"4GB","8GB","12GB","16GB",};
+				String txtUnidad[] = {"500GB SSD","1TB HDD","500GB HDD","256GB SSD","500GB SSD" };	
+				String txtTarjeta[]= {};
+				
+				// agregando el switch
+				switch(item) {
+				case "GAMER ASUS TUF F15" :{
+					txtPrecio.setText("7500");
+					break;
+				}
+				case "ASUS TUF GAMING A 15" : {
+					txtPrecio.setText("3000");
+					break;
+				}
+				case "ASUS CI3": {
+					txtPrecio.setText("1399");
+				}
+				case "ASUS X1502ZA-BQ704W 15.6":{
+					txtPrecio.setText("3299");
+				}
+				case "LENOVO V14 INTEL":{
+					txtPrecio.setText("2489");
+				}
+				case "HP 15-EF2501LA 15.6":{
+					txtPrecio.setText("2500");
+				}
+				case "HP 14' HD 240G7 ":{
+					txtPrecio.setText("893");
+				}
+				case "ADVANCE PS7085,15.6' FHD":{
+					txtPrecio.setText("1250");
+				}
+				case "HP 15.6' 15-DY5010LA ":{
+					txtPrecio.setText("3500");
+				}
+				case "HP 15-DY2505LA 15.6":{
+					txtPrecio.setText("2900");
+				}
+				case"HP 14-cf2513 ":{
+					txtPrecio.setText("2100");
+				}
+				case"THINK PAD  P1 5ta Generacion 16":{
+					txtPrecio.setText("8500");
+				}
+				}
+			
+				
+			}
+		});
 		btnagregar.setBounds(122, 229, 85, 21);
 		contentPane.add(btnagregar);
 		

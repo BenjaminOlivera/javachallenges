@@ -146,16 +146,26 @@ public class Laptopshop extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String item;  //here
 				item = cmbmodelo.getSelectedItem().toString();
+				String[] txtProcesador;
+				txtProcesador = new String[0];
+				txtProcesador[0] = "Intel Core i7 ";
+				txtProcesador[1] = "Ryzen 7";
+				txtProcesador[2] = "Intel Core I5";
+				txtProcesador[3] =  "Ryzen 5";
+				txtProcesador[4] =  "CELERON N4020";
+				txtProcesador[5] =   "Core I3";
+				txtProcesador[6] = "Core I9 serie H";
+				//txtProcesador[] = {"Intel Core i7 ","Ryzen 7","Intel Core I5","Ryzen 5","CELERON N4020","Core I3","Core I9 seri H"};
 				
-				String txtProcesador[] = {"Intel Core i7 ","Ryzen 7","Intel Core I5","Ryzen 5","CELERON N4020","Core I3","Core I9 seri H"};
-				String  txtRam[] = {"4GB","8GB","12GB","16GB",};
-				String txtUnidad[] = {"500GB SSD","1TB HDD","500GB HDD","256GB SSD","500GB SSD" };	
-				String txtTarjeta[]= {};
+				String[]  txtRam = {"4GB","8GB","12GB","16GB",};
+				String[] txtUnidad = {"500GB SSD","1TB HDD","500GB HDD","256GB SSD","500GB SSD" };	
+				String[] txtTarjeta= {"NVIDIA GeForce RTX 3050","Intel Iris Xe Graphics","Geforce MX350 2GB GDDR5","RTX3050"," NVIDIA GeForce GTX 1650","AMD Radeon", "Integrada","Intel UHD Graphics"};
 				
 				// agregando el switch
 				switch(item) {
 				case "GAMER ASUS TUF F15" :{
 					txtPrecio.setText("7500");
+					
 					break;
 				}
 				case "ASUS TUF GAMING A 15" : {

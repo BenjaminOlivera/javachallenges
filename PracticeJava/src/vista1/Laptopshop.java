@@ -136,20 +136,16 @@ public class Laptopshop extends JFrame {
 		txtPrecio.setBounds(122, 200, 190, 19);
 		contentPane.add(txtPrecio);
 		
-		JButton btnAgregar = new JButton("Agregar");
-		btnAgregar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnAgregar.setBounds(119, 232, 85, 21);
-		contentPane.add(btnAgregar);
+		JComboBox cmbmodelo = new JComboBox();
+		cmbmodelo.setBounds(122, 38, 190, 21);
+		contentPane.add(cmbmodelo);
 		
-		JButton btnLimpiar = new JButton("Limpiar");
-		btnLimpiar.setBounds(227, 232, 85, 21);
-		contentPane.add(btnLimpiar);
+		JButton btnagregar = new JButton("Agregar");
+		btnagregar.setBounds(122, 229, 85, 21);
+		contentPane.add(btnagregar);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(122, 38, 190, 21);
-		contentPane.add(comboBox);
+		JButton btnlimpiar = new JButton("Limpiar");
+		btnlimpiar.setBounds(227, 232, 85, 21);
+		contentPane.add(btnlimpiar);
 	}
 }

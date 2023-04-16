@@ -146,7 +146,7 @@ public class Laptopshop extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String item;  //here
 				item = cmbmodelo.getSelectedItem().toString();
-				String[] txtProcesador;
+				/*String[] txtProcesador;
 				txtProcesador = new String[0];
 				txtProcesador[0] = "Intel Core i7 ";
 				txtProcesador[1] = "Ryzen 7";
@@ -155,52 +155,108 @@ public class Laptopshop extends JFrame {
 				txtProcesador[4] =  "CELERON N4020";
 				txtProcesador[5] =   "Core I3";
 				txtProcesador[6] = "Core I9 serie H";
-				//txtProcesador[] = {"Intel Core i7 ","Ryzen 7","Intel Core I5","Ryzen 5","CELERON N4020","Core I3","Core I9 seri H"};
+				//txtProcesador[] = {"Intel Core i7 12va","Ryzen 7","Intel Core I5","Ryzen 5","CELERON N4020","Core I3","Core I9 serie H"};
+				*/
+				//String[]  txtRam = {"4GB","8GB","12GB","16GB",};
+				//String[] txtUnidad = {"500GB SSD","1TB HDD","500GB HDD","256GB SSD","500GB SSD" };	
+				//String[] txtTarjeta= {"NVIDIA GeForce RTX 3050","Intel Iris Xe Graphics","Geforce MX350 2GB GDDR5","RTX3050"," NVIDIA GeForce GTX 1650","AMD Radeon", "Integrada","Intel UHD Graphics"};
 				
-				String[]  txtRam = {"4GB","8GB","12GB","16GB",};
-				String[] txtUnidad = {"500GB SSD","1TB HDD","500GB HDD","256GB SSD","500GB SSD" };	
-				String[] txtTarjeta= {"NVIDIA GeForce RTX 3050","Intel Iris Xe Graphics","Geforce MX350 2GB GDDR5","RTX3050"," NVIDIA GeForce GTX 1650","AMD Radeon", "Integrada","Intel UHD Graphics"};
-				
-				// agregando el switch
 				switch(item) {
 				case "GAMER ASUS TUF F15" :{
 					txtPrecio.setText("7500");
-					
+					txtProcesador.setText("Intel Core I5");
+					txtRam.setText("8GB");
+					txtUnidad.setText("512GB SSD");
+					txtTarjeta.setText("NVIDIA GeForce RTX 3050");
 					break;
 				}
 				case "ASUS TUF GAMING A 15" : {
 					txtPrecio.setText("3000");
+					txtProcesador.setText("Ryzen 7");
+					txtRam.setText("16GB");
+					txtUnidad.setText("500GB SSD");
+					txtTarjeta.setText(" RTX3050");
 					break;
 				}
 				case "ASUS CI3": {
 					txtPrecio.setText("1399");
+					txtProcesador.setText("Core I3");
+					txtRam.setText("8GB");
+					txtUnidad.setText("256GB SSD");
+					txtTarjeta.setText("Intel UHD Graphics");
+					break;
 				}
 				case "ASUS X1502ZA-BQ704W 15.6":{
 					txtPrecio.setText("3299");
+					txtProcesador.setText("Intel Core I7 12va");
+					txtRam.setText("12GB");
+					txtUnidad.setText("500GB SSD");
+					txtTarjeta.setText("Intel Iris Xe Graphics");
+					break;
 				}
 				case "LENOVO V14 INTEL":{
 					txtPrecio.setText("2489");
+					txtProcesador.setText("Intel Core I7");
+					txtRam.setText("20GB");
+					txtUnidad.setText("1TB HDD");
+					txtTarjeta.setText("Geforce MX350 2GB GDDR5");
+					break;
 				}
 				case "HP 15-EF2501LA 15.6":{
 					txtPrecio.setText("2500");
+					txtProcesador.setText(" Ryzen 5");
+					txtRam.setText("12GB");
+					txtUnidad.setText("500GB SSD");
+					txtTarjeta.setText("AMD RADEON");
+					break;
 				}
 				case "HP 14' HD 240G7 ":{
 					txtPrecio.setText("893");
+					txtProcesador.setText("Celeron");
+					txtRam.setText("4GB");
+					txtUnidad.setText("1TB");
+					txtTarjeta.setText("Intel UHD Graphics");
+					break;
 				}
 				case "ADVANCE PS7085,15.6' FHD":{
 					txtPrecio.setText("1250");
+					txtProcesador.setText("Intel Core I7 ");
+					txtRam.setText("8GB");
+					txtUnidad.setText("256 GBSSD");
+					txtTarjeta.setText("Intel UHD Graphics");
+					break;
 				}
 				case "HP 15.6' 15-DY5010LA ":{
 					txtPrecio.setText("3500");
+					txtProcesador.setText("Intel Core I7 ");
+					txtRam.setText("12GB");
+					txtUnidad.setText("500GB SSD");
+					txtTarjeta.setText("Intel UHD Graphics");
+					break;
 				}
-				case "HP 15-DY2505LA 15.6":{
+				case "HP 15-DY2505LA 15.6 ":{
 					txtPrecio.setText("2900");
+					txtProcesador.setText("Intel Core I5");
+					txtRam.setText("12GB");
+					txtUnidad.setText("500GB SSD");
+					txtTarjeta.setText("Intel UH Graphics");
+					break;
 				}
 				case"HP 14-cf2513 ":{
-					txtPrecio.setText("2100");
+					txtPrecio.setText("2149");
+					txtProcesador.setText("Intel Core I3 10ma");
+					txtRam.setText("4GB");
+					txtUnidad.setText("500GB HDD");
+					txtTarjeta.setText("Intel UH Graphics");
+					break;
 				}
 				case"THINK PAD  P1 5ta Generacion 16":{
 					txtPrecio.setText("8500");
+					txtProcesador.setText("Serie H");
+					txtRam.setText("16 GB DDR5");
+					txtUnidad.setText("1 TB SSD M.2 ");
+					txtTarjeta.setText("NVIDIA® RTX™ A1000 4 GB GDDR6");
+					break;
 				}
 				}
 			

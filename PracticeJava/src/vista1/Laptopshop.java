@@ -49,6 +49,7 @@ public class Laptopshop extends JFrame {
 	 * Create the frame.
 	 */
 	public Laptopshop() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\eclipse-workspace\\Iconos\\laptop.png"));
 		setTitle("Laptopshop");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 386, 346);
@@ -238,7 +239,7 @@ public class Laptopshop extends JFrame {
 					txtPrecio.setText("2900");
 					txtProcesador.setText("Intel Core I5");
 					txtRam.setText("12GB");
-					txtUnidad.setText("500GB SSD");
+					txtUnidad.setText("500GB HDD");
 					txtTarjeta.setText("Intel UH Graphics");
 					break;
 				}
